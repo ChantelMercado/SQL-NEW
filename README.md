@@ -24,3 +24,28 @@ VALUES
     (13, 'Slow Cooker', 'Appliances', 49.95, 30, 4.7),
     (14, 'Cutlery Set', 'Kitchen Supplies', 34.50, 40, 4.4),
     (15, 'Cozy Throw Blanket', 'Furnishings', 24.99, 100, 4.2);
+
+
+#1--Order the items by price
+
+SELECT item_name, price
+FROM superstore;
+
+#2-- Show a statistic about the item prices 
+
+SELECT AVG(price), item_name
+FROM superstore
+GROUP BY item_name;
+
+#3--Show a statistic  about the price for items in category Kitchen supplies
+
+SELECT SUM(price), 'Kitchen Supplies'
+FROM superstore
+GROUP BY 'Kitchen Supplies';
+
+#4-- How many Smart Led tv are in stock?
+
+SELECT stock_quantity, 'Smart LED TV'
+FROM superstore;
+
+
